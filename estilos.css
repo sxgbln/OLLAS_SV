@@ -1,54 +1,82 @@
-.company {
-    /**/
+/*TITULO*/
 
-    text-align: center;
+h4 {
     font-family: "Noto Serif Lao", serif;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: light;
+    font-weight: 400;
+    font-style: normal;
     font-variation-settings:
-        "wdth" 75;
-    border: 2px solid #4CAF50;
-    padding: 1rem;
+        "wdth" 900;
+    text-align: center;
+    font-size: 3rem;
+    border-style: solid;
+    padding: 25px;
 
 }
 
-#carouselExampleCaptions {
-    /* Your styles here */
-    background-color: #00ffbf;
-    /* Background color */
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #7171ff;
-    /* MEDIA QUERY */
-    
-    
-}
-
-h5,p {
-    /*CODIGIO*/
-    border: 2px solid #ff0000;
-
-}
-@media only screen and (max-width: 1200px){
-    /*CODIGO*/
-    h5, p {
-        /*CODIGIO*/
-        display: none;
-    }
-    #carouselExampleCaptions{
-        /*COIGO*/
-        width: 75%;
+@media only screen and (max-width: 600px) {
+    h4 {
+        font-size: 1.5rem;
+        padding: 5px;
     }
 }
-/*PRUEBA*/
-.d-flex {
-    /*CODIGO*/
-    width: 75%;
+
+/*TITULO*/
+/*CARRUSEL*/
+
+#carouselExampleCaptions{
+    border-style: solid;
+    width: 60%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
-    border: 2px solid #ff0000;
 }
+@media only screen and (max-width: 600px) {
+    #carouselExampleCaptions {
+        display: block;
+        width: 70%;
+        max-height: 70%;
+    }
+}
+
+
+h5{
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+/*CARRUSEL*/
+/*TARJETAS*/
+
+.card-body h5{
+    font-size: 2rem;
+    
+}
+.card-body p{
+    font-size: 1.5rem;
+    
+}
+@media only screen and (max-width: 600px) {
+    .card-body h5 {
+        font-size: 1.5rem;
+    }
+    .card-body p{
+        font-size: 1.25rem;
+        
+    }
+    .card{
+        border-style: solid;
+        border-color: black;
+        padding: 1rem;
+        display: block;
+        width: 90%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 
