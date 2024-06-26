@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Card Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <!--IMPORTAR FONTS DE GOOGLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@100..900&display=swap" rel="stylesheet">
+    <!--IMPORTAR FONTS DE GOOGLE-->
+</head>
+
+<body>
+    <!--TITULO-->
+    <div class="company">
+        <h4>Ollas a Presión El Salvador</h4>
+    </div>
+    <!--TITULO-->
+    <!--BARRA NAVEGCION-->
+    <div class="d-flex justify-content-center" style="padding: 1rem;">
+        <ul class="nav nav-underline">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="inicio.html">Principal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="videos.html">Videos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de nosotros</a>
+            </li>
+        </ul>
+    </div>
+    <!--BARRA NAVEGCION-->
+    <!--CONTENIDO-->
+
+    <!-- First Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Como utilizar tu olla de presión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Responsive video wrapper -->
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoIframe1" src="https://www.youtube.com/embed/p7rYRCnsKoU?si=NkC84d18F94ky1my"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Otro video de olla de presión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Responsive video wrapper -->
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoIframe2" src="https://www.youtube.com/embed/jegMVC-12jc?si=uEblZkGGf0GLL_DM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to stop video when modal is closed -->
+    <script>
+        var videoModal1 = document.getElementById('exampleModal1');
+        var videoIframe1 = document.getElementById('videoIframe1');
+        var videoModal2 = document.getElementById('exampleModal2');
+        var videoIframe2 = document.getElementById('videoIframe2');
+
+        videoModal1.addEventListener('hidden.bs.modal', function () {
+            var src = videoIframe1.src;
+            videoIframe1.src = '';
+            videoIframe1.src = src;
+        });
+
+        videoModal2.addEventListener('hidden.bs.modal', function () {
+            var src = videoIframe2.src;
+            videoIframe2.src = '';
+            videoIframe2.src = src;
+        });
+    </script>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 mb-3">
+                <div class="card">
+                    <img src="720P.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Como utilizar tu olla de presión</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">
+                            Ver video
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-lg-6 mb-3">
+                <div class="card">
+                    <img src="720P.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Como reemplazar el empaque de tu olla de presión</h5>
+                        <p class="card-text">This is another card with the same video modal. You can add more content
+                            here.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            Ver video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--CONTENIDO-->
+
+    <script src="acciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
