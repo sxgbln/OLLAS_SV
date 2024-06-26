@@ -13,17 +13,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@100..900&display=swap" rel="stylesheet">
   <!--IMPORTAR FONTS DE GOOGLE-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--ICONOS DE CLOUDFARE -->
+  <style>
+    .form-control:focus {
+      outline: 0 !important;
+      border-color: initial;
+      box-shadow: none;
+    }
 
+    .btn-pos {
+      position: relative;
+      z-index: 1;
+      left: -36px;
+    }
 
+    .input-group-text i {
+      cursor: pointer;
+    }
+
+    .input-group-append {
+      display: flex;
+      align-items: center;
+    }
+
+    .input-group-text {
+      border-left: none;
+    }
+  </style>
 </head>
 
 <body>
-
   <!--TITULO-->
   <div class="company">
     <h4>Ollas a Presión El Salvador</h4>
   </div>
   <!--TITULO-->
+  <!--BARRA NAVEGCION-->
+  <div class="d-flex justify-content-center" style="padding: 15px;">
+    <ul class="nav nav-underline">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Principal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="videos.html">Videos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Acerca de nosotros</a>
+      </li>
+    </ul>
+  </div>
+  <!--BARRA NAVEGCION-->
   <!--CARRUSEL-->
   <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
@@ -37,40 +78,30 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <picture>
-          <source srcset="MORADO.png" media="(max-width: 600px)">
-          <source srcset="CELESTE.png" media="(max-width: 1500px)">
-          <img src="CELESTE.png" class="d-block w-100" alt="...">
+          <source srcset="OLLA_SQR_2.png" media="(max-width: 600px)">
+          <source srcset="OLLAS_1.png" media="(max-width: 1500px)">
+          <img src="OLLAS_1.png" class="d-block w-100" alt="...">
         </picture>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
+
       </div>
 
       <div class="carousel-item">
         <picture>
-          <source srcset="MORADO.png" media="(max-width: 600px)">
-          <source srcset="CELESTE.png" media="(max-width: 1500px)">
-          <img src="CELESTE.png" class="d-block w-100" alt="...">
+          <source srcset="OLLA_SQR_2.png" media="(max-width: 600px)">
+          <source srcset="OLLAS_1.png" media="(max-width: 1500px)">
+          <img src="OLLAS_1.png" class="d-block w-100" alt="...">
         </picture>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
+
       </div>
 
       <div class="carousel-item">
         <picture>
-          <source srcset="MORADO.png" media="(max-width: 600px)">
-          <source srcset="CELESTE.png" media="(max-width: 1500px)">
-          <img src="CELESTE.png" class="d-block w-100" alt="...">
+          <source srcset="OLLA_SQR_2.png" media="(max-width: 600px)">
+          <source srcset="OLLAS_1.png" media="(max-width: 1500px)">
+          <img src="OLLAS_1.png" class="d-block w-100" alt="...">
         </picture>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-      </div>
 
+      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -84,67 +115,115 @@
   <!--CARRUSEL-->
   <!--TARJETAS-->
   <div class="container my-4">
-    <input type="text" id="searchInput" class="form-control" placeholder="Buscar..." onkeyup="filterCards()">
+    <!-- Search with Button -->
+    <div class="input-group mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+      <button id="searchButton" class="btn btn-primary" type="button">Buscar</button>
+    </div>
   </div>
   <div class="container">
     <div id="cardGroup" class="card-group row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card">
-          <img src="MORADO.png" class="card-img-top" alt="...">
+          <img src="VALVULA_XP.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Válvulas</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This content is a little bit longer.</p>
-
+            <p class="card-text">Válvula reguladora para su olla de presión.</p>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card">
-          <img src="MORADO.png" class="card-img-top" alt="...">
+          <img src="EMPAQUE.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Empaques</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-
+            <p class="card-text">Empaque o sello de seguridad para su olla de presión.</p>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card">
-          <img src="MORADO.png" class="card-img-top" alt="...">
+          <img src="MANGOS_1.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Mangos</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-
+            <p class="card-text">Mangos superiores e inforiores para su olla de presión.</p>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card">
-          <img src="MORADO.png" class="card-img-top" alt="...">
+          <img src="MANGOS_1.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Tapaderas</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-
+            <h5 class="card-title">Mangos</h5>
+            <p class="card-text">Mangos superiores e inforiores para su olla de presión.</p>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
   <!--TARJETAS-->
+  <!--SEPARADOR-->
+  <div clas="separador" style="padding: 1rem;"></div>
+  <!--SEPARADOR-->
+  <!--PIE DE PAGINA-->
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="padding: 0.5rem;">
+
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Olla a presión El Salvador
+            </h6>
+            <p>
+              Tenemos la más completa gama de repuestos para ollas de presión de todas las marcas y modelos.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+
+
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+            <p><i class="fa fa-facebook"></i> Ollas a presión y repuestos El Salvador</p>
+            <p>
+              <i class="fa fa-whatsapp"></i> 6109 - 1000
+            </p>
+            <p><i class="fa fa-phone"></i> 2262 - 7393</p>
+            <p><i class="fa fa-phone"></i> 7762 - 0901</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright: Ollas a presión El Salvador.
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!--PIE DE PAGINA-->
+
 
   <script src="acciones.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
