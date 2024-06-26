@@ -9,8 +9,8 @@ h4 {
         "wdth" 900;
     text-align: center;
     font-size: 3rem;
-    border-style: solid;
-    padding: 25px;
+    
+    padding: 10px;
 
 }
 
@@ -24,13 +24,14 @@ h4 {
 /*TITULO*/
 /*CARRUSEL*/
 
-#carouselExampleCaptions{
+#carouselExampleCaptions {
     border-style: solid;
     width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 @media only screen and (max-width: 600px) {
     #carouselExampleCaptions {
         display: block;
@@ -40,33 +41,38 @@ h4 {
 }
 
 
-h5{
+h5 {
     font-size: 2rem;
 }
 
 p {
     font-size: 1.5rem;
 }
+
 /*CARRUSEL*/
 /*TARJETAS*/
 
-.card-body h5{
+.card-body h5 {
     font-size: 2rem;
-    
+
 }
-.card-body p{
+
+.card-body p {
     font-size: 1.5rem;
-    
+
 }
+
 @media only screen and (max-width: 600px) {
     .card-body h5 {
         font-size: 1.5rem;
     }
-    .card-body p{
+
+    .card-body p {
         font-size: 1.25rem;
-        
+
     }
-    .card{
+
+    .card {
         border-style: solid;
         border-color: black;
         padding: 1rem;
@@ -77,6 +83,17 @@ p {
         margin-right: auto;
     }
 }
+
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-link.active {
+    color: black !important;
+}
+
+
 
 
 
